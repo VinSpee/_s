@@ -1,0 +1,21 @@
+.heading__headline, .heading__headline > a
+	color: $base4
+	text-decoration: none
+
+.heading__headline
+	+clearfix
+	text-align: center
+	+text-shadow(1px 2px 0 $base002)
+	+rhythm(0, 1, 1, 1, ms(4))
+	+trailing-border(5px, 1, ms(4))
+	border-color: $base4
+	+box-shadow(1px 3px 0 -1px $base002)
+
+.site__heading
+	background: $base02
+	padding: 0 1.25em
+
+.site__content
+	padding: .5em
+	+background(image-url("paper_texture.png") no-repeat, radial-gradient(circle at center -5em, scale-color($base4, $lightness: -10%), $base04))
+	+background-size(100%, 100% auto)

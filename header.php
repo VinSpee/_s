@@ -27,8 +27,8 @@
 		<?php do_action( 'before' ); ?>
 		<header class="site__heading" role="banner">
 			<hgroup>
-				<h1 class="heading__title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="heading__description"><?php bloginfo( 'description' ); ?></h2>
+				<h1 class="heading__headline"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<span class="heading__description"><?php bloginfo( 'description' ); ?></span>
 			</hgroup>
 
 			<nav class="site__navigation--primary" role="navigation">

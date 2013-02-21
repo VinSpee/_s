@@ -1,4 +1,28 @@
 html
+	@extend %sans
+
+[class*=headline]
+	@extend %serif
+
+h1
+	+adjust-font-size-to(ms(4))
+	+trailer(1, ms(4))
+
+h2
+	+adjust-font-size-to(ms(3))
+	+trailer(1, ms(3))
+
+h3
+	+adjust-font-size-to(ms(2))
+	+trailer(1, ms(2))
+
+h4
+	+adjust-font-size-to(ms(1))
+	+trailer(1, ms(1))
+
+h5
+	+adjust-font-size-to(ms(0))
+	+trailer(1, ms(0))
 
 input
 	+appearance(none)
@@ -9,7 +33,7 @@ input
 
 div[role=main]
 	+container
-	+susy-grid-background
+	//+susy-grid-background
 	+at-breakpoint($break)
-		+susy-grid-background
+		//+susy-grid-background
 		+set-container-width
