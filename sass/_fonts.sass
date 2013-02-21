@@ -1,0 +1,22 @@
+// Icons
+
+%icon
+	//font-family: "flex-icons"
+	-webkit-font-smoothing: antialiased
+	-webkit-font-feature-settings: "liga", "dlig"
+	-moz-font-feature-settings: "liga=1, dlig=1"
+	-moz-font-feature-settings: "liga", "dlig"
+	-ms-font-feature-settings: "liga", "dlig"
+	-o-font-feature-settings: "liga", "dlig"
+	font-feature-settings: "liga", "dlig"
+	text-rendering: optimizeLegibility
+	font-weight: normal
+	font-style: normal
+	text-transform: none
+
+[data-icon]:before
+	@extend %icon
+	content: attr(data-icon)
+	speak: none
+	margin-right: 0.75em
+	+inline-block

@@ -1,0 +1,15 @@
+html
+
+input
+	+appearance(none)
+	margin: 0
+	padding: 0
+	border: 0
+	+adjust-font-size-to(ms(0))
+
+div[role=main]
+	+container
+	+susy-grid-background
+	+at-breakpoint($break)
+		+susy-grid-background
+		+set-container-width
