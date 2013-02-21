@@ -8,34 +8,36 @@
 
 get_header(); ?>
 
-		<section id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+		<div class="site__content">
 
-			<?php if ( have_posts() ) : ?>
+			<div class="site__page">
 
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				</header><!-- .page-header -->
+				<?php if ( have_posts() ) : ?>
 
-				<?php _s_content_nav( 'nav-above' ); ?>
+					<header class="page__heading">
+						<h1 class="page__headline"><?php printf( __( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					</header><!-- .page-header -->
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+					<?php _s_content_nav( 'nav-above' ); ?>
 
-					<?php get_template_part( 'content', 'search' ); ?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php endwhile; ?>
+						<?php get_template_part( 'content', 'search' ); ?>
 
-				<?php _s_content_nav( 'nav-below' ); ?>
+					<?php endwhile; ?>
 
-			<?php else : ?>
+					<?php _s_content_nav( 'nav-below' ); ?>
 
-				<?php get_template_part( 'no-results', 'search' ); ?>
+				<?php else : ?>
 
-			<?php endif; ?>
+					<?php get_template_part( 'no-results', 'search' ); ?>
 
-			</div><!-- #content .site-content -->
-		</section><!-- #primary .content-area -->
+				<?php endif; ?>
+
+			</div>
+
+		</div><!-- #content .site-content -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -9,19 +9,18 @@
 get_header();
 ?>
 
-		<div id="primary" class="content-area image-attachment">
-			<div id="content" class="site-content" role="main">
+		<div class="site__content">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+				<article <?php post_class(); ?>>
+					<header class="entry__heading">
+						<h1 class="entry__headline"><?php the_title(); ?></h1>
 
-						<div class="entry-meta">
+						<div class="entry__meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', '_s' ),
+								printf( __( 'Published <span class="entry__date__layout"><time class="entry__date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', '_s' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
 									wp_get_attachment_url(),
@@ -35,15 +34,15 @@ get_header();
 							<?php edit_post_link( __( 'Edit', '_s' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 						</div><!-- .entry-meta -->
 
-						<nav id="image-navigation" class="site-navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', '_s' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', '_s' ) ); ?></span>
+						<nav class="site__navigation--image">
+							<span class="site__navigation--image__action--previous"><?php previous_image_link( false, __( '&larr; Previous', '_s' ) ); ?></span>
+							<span class="site__navigation--image__action--next"><?php next_image_link( false, __( 'Next &rarr;', '_s' ) ); ?></span>
 						</nav><!-- #image-navigation -->
 					</header><!-- .entry-header -->
 
-					<div class="entry-content">
+					<div class="entry__content">
 
-						<div class="entry-attachment">
+						<div class="entry__attachment">
 							<div class="attachment">
 								<?php
 									/**
@@ -84,28 +83,28 @@ get_header();
 							</div><!-- .attachment -->
 
 							<?php if ( ! empty( $post->post_excerpt ) ) : ?>
-							<div class="entry-caption">
+							<div class="entry__caption">
 								<?php the_excerpt(); ?>
 							</div><!-- .entry-caption -->
 							<?php endif; ?>
 						</div><!-- .entry-attachment -->
 
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page__links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
 
 					</div><!-- .entry-content -->
 
-					<footer class="entry-meta">
+					<footer class="entry__meta">
 						<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-							<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', '_s' ), get_trackback_url() ); ?>
+							<?php printf( __( '<a class="comment__action--respond" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback__action" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', '_s' ), get_trackback_url() ); ?>
 						<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
-							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', '_s' ), get_trackback_url() ); ?>
+							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback__action" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', '_s' ), get_trackback_url() ); ?>
 						<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
-							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', '_s' ); ?>
+							<?php _e( 'Trackbacks are closed, but you can <a class="comment__action-respond" href="#respond" title="Post a comment">post a comment</a>.', '_s' ); ?>
 						<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
 							<?php _e( 'Both comments and trackbacks are currently closed.', '_s' ); ?>
 						<?php endif; ?>
-						<?php edit_post_link( __( 'Edit', '_s' ), ' <span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', '_s' ), ' <span class="entry__action--edit">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 

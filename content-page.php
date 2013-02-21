@@ -7,14 +7,14 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+<article <?php post_class(); ?>>
+	<header class="entry__heading">
+		<h1 class="entry__headline"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry__content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page__links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry__meta"><span class="entry__action--edit">', '</span></footer>' ); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
