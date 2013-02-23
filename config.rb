@@ -1,5 +1,6 @@
 require "susy"
 require "modular-scale"
+require "omg-text"
 
 http_path = "/"
 css_dir = "./"
