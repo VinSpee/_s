@@ -1,21 +1,37 @@
+.site
+	padding: .5em
+
 .heading__headline, .heading__headline > a
-	color: $base4
+	color: $base02
 	text-decoration: none
 
 .heading__headline
+	@extend %shadowed-l
 	+clearfix
 	text-align: center
-	+text-shadow(1px 2px 0 $base002)
-	+rhythm(0, 1, 1, 1, ms(4))
-	+trailing-border(5px, 1, ms(4))
-	border-color: $base4
-	+box-shadow(1px 3px 0 -1px $base002)
+	+rhythm(0, 1, 1, 0, ms(2))
+	border-color: $base02
+	&:after
+		display: block
+		background: $base02
+		margin: 0 auto
+		width: 90%
+		line-height: .25
+		content: "\00a0"
+		+extrude-text($color: $base4)
+		+leader(.32, ms(0))
 
 .site__heading
-	background: $base02
+	//background: $base02
 	padding: 0 1.25em
 
-.site__content
-	padding: .5em
-	+background(image-url("paper_texture.png") no-repeat, radial-gradient(circle at center -5em, scale-color($base4, $lightness: -10%), $base04))
-	+background-size(100%, 100% auto)
+.heading__description
+	@extend %serif
+	width: 80%
+	display: block
+	text-align: center
+	+adjust-font-size-to(ms(0))
+	color: $base4
+	margin: 0 auto
+	+text-shadow(0 -1px 1px $base004)
+	+trailer

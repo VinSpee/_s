@@ -1,12 +1,16 @@
 html
-	@extend %sans
-
-[class*=headline]
+	+background(image-url("paper_texture.png") no-repeat, radial-gradient(circle at center -5em, $base04, scale-color($base04, $lightness: -20%)))
+	+background-size(100%, 100% auto)
 	@extend %serif
 
+[class*=headline]
+	@extend %sans
+
+textarea
+	width: 100%
 h1
-	+adjust-font-size-to(ms(4))
-	+trailer(1, ms(4))
+	+adjust-font-size-to(ms(3))
+	+trailer(1, ms(3))
 
 h2
 	+adjust-font-size-to(ms(3))
@@ -30,6 +34,9 @@ input
 	padding: 0
 	border: 0
 	+adjust-font-size-to(ms(0))
+
+p
+	+adjust-font-size-to(ms(1))
 
 div[role=main]
 	+container
