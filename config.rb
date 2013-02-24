@@ -1,6 +1,7 @@
 require "susy"
 require "modular-scale"
 require "omg-text"
+require "sassy_noise"
 
 http_path = "/"
 css_dir = "./"

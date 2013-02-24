@@ -72,6 +72,7 @@ function _s_setup() {
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
+
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', '_s' ),
 	) );
@@ -105,7 +106,7 @@ function _s_register_custom_background() {
 	$args = apply_filters( '_s_custom_background_args', $args );
 
 	if ( function_exists( 'wp_get_theme' ) ) {
-		add_theme_support( 'custom-background', $args );
+		//add_theme_support( 'custom-background', $args );
 	} else {
 		define( 'BACKGROUND_COLOR', $args['default-color'] );
 		if ( ! empty( $args['default-image'] ) )

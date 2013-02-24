@@ -1,6 +1,7 @@
 html
-	+background(image-url("paper_texture.png") no-repeat, radial-gradient(circle at center -5em, $base04, scale-color($base04, $lightness: -20%)))
-	+background-size(100%, 100% auto)
+	//+background(image-url("paper_texture.png") no-repeat, radial-gradient(circle at center -5em, $base4, $base04))
+	//+background-size(100%, 100% auto)
+	+sassy-noise(radial-gradient(circle at center -5em, $base4, $base04), $size: 50, $intensity: .5)
 	@extend %serif
 
 [class*=headline]
@@ -40,7 +41,7 @@ p
 
 div[role=main]
 	+container
-	//+susy-grid-background
+	+susy-grid-background
 	+at-breakpoint($break)
 		//+susy-grid-background
 		+set-container-width

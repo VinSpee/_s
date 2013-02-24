@@ -9,7 +9,7 @@
 	@extend %shadowed-l
 	+clearfix
 	text-align: center
-	+rhythm(0, 1, 1, 0, ms(2))
+	+rhythm(0, 1, .35, 0, ms(2))
 	border-color: $base02
 	&:after
 		display: block
@@ -18,12 +18,10 @@
 		width: 90%
 		line-height: .25
 		content: "\00a0"
-		+extrude-text($color: $base4)
-		+leader(.32, ms(0))
+		+extrude-box($depth: 4)
+		+leader(.34, ms(0))
 
 .site__heading
-	//background: $base02
-	padding: 0 1.25em
 
 .heading__description
 	@extend %serif
@@ -31,7 +29,30 @@
 	display: block
 	text-align: center
 	+adjust-font-size-to(ms(0))
-	color: $base4
+	text-transform: uppercase
+	font-weight: bold
+	color: $base004
 	margin: 0 auto
-	+text-shadow(0 -1px 1px $base004)
-	+trailer
+	+text-shadow(0 1px 1px $base4)
+	+trailer(1/2)
+
+.site__navigation__skip > a
+	display: block
+	+adjust-font-size-to(ms(0))
+
+// NAV
+
+.heading__info
+	+clearfix
+.site__navigation--primary
+	background: $base02
+
+.menu > ul
+
+[class*=page_item]
+	> a
+		padding: 0 .5em
+		color: $base4
+		text-decoration: none
+		+adjust-font-size-to(ms(2))
+		text-transform: uppercase

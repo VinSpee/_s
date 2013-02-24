@@ -8,15 +8,17 @@
 	position: absolute
 	width: 1px
 
+$shadow-color: transparentize($base03, .4)
+
 %shadowed-l
 	@extend %sans
-	+omg-text(transparentize($base4, .4), bottom-right, 6, flat)
+	+omg-text($shadow-color, bottom-right, 6, flat)
 
 %shadowed-d
 	@extend %sans
 	+omg-text($base02, bottom-right, 5, flat)
 
-=extrude-text($color: white, $depth: 8, $gradient: 0)
+=extrude-box($color: $shadow-color, $depth: 8, $gradient: 0)
 	$all: ()
 	@for $i from 1 through $depth
 		$all: append($all, append($i*1px $i*1px 0em 0, $color - $i*$gradient), comma)
