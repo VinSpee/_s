@@ -10,10 +10,6 @@
 			<?php do_action( 'before_sidebar' ); ?>
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
-				<aside class="widget widget_search">
-					<?php get_search_form(); ?>
-				</aside>
-
 				<aside class="widget">
 					<h1 class="widget-title"><?php _e( 'Archives', '_s' ); ?></h1>
 					<ul>

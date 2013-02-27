@@ -7,7 +7,7 @@
  */
 ?>
 
-<article <?php post_class(); ?>>
+<article <?php post_class('entry'); ?>>
 	<header class="entry__heading">
 		<h1 class="entry__headline"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
@@ -16,5 +16,5 @@
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page__links">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry__meta"><span class="entry__action--edit">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', '_s' ), '<footer class="entry__meta--footer"><span class="entry__action--edit">', '</span></footer>' ); ?>
 </article><!-- #post-<?php the_ID(); ?> -->

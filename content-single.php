@@ -5,11 +5,11 @@
  */
 ?>
 
-<article <?php post_class(); ?>>
+<article <?php post_class('entry'); ?>>
 	<header class="entry__heading">
 		<h1 class="entry__headline"><?php the_title(); ?></h1>
 
-		<div class="entry__meta">
+		<div class="entry__meta--header">
 			<?php _s_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
@@ -19,7 +19,7 @@
 		<?php wp_link_pages( array( 'before' => '<div class="page__action">' . __( 'Pages:', '_s' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry__meta">
+	<footer class="entry__meta--footer">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', '_s' ) );

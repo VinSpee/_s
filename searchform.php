@@ -8,8 +8,7 @@
 ?>
 	<form class="site__search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 		<fieldset class="search__layout">
-			<label for="search" class="search__field-description"><?php _e( 'Search', '_s' ); ?></label>
-			<input type="search" class="search__field-data" name="search" value="<?php echo esc_attr( get_search_query() ); ?>" id="search" placeholder="<?php esc_attr_e( 'Search &hellip;', '_s' ); ?>" />
-			<input type="submit" class="search__field-confirm" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', '_s' ); ?>" />
+			<input type="search" class="search__field--data" name="search" value="<?php echo esc_attr( get_search_query() ); ?>" id="search" placeholder="<?php esc_attr_e( 'Search &hellip;', '_s' ); ?>" />
+			<input type="submit" class="search__field--button" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', '_s' ); ?>" />
 		</fieldset>
 	</form>

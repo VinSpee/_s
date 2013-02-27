@@ -1,5 +1,5 @@
 .site__content
-	//padding: 0 .5em
+	padding: 0 .5em
 
 .heading__headline, .heading__headline > a
 	color: $base02
@@ -92,7 +92,6 @@
 // ENTRIES
 
 .entry
-	padding: 0 $gutter-width
 	+trailer
 	&:before
 		padding: 0 -.5em
@@ -137,9 +136,6 @@
 
 // COMMENTS
 
-.comments
-	background: $base04
-
 .comments__headline
 	width: 100%
 	display: inline-block
@@ -148,9 +144,6 @@
 	color: $base04
 	background: $base02
 	padding: msem(-2)
-
-.comment__items
-	padding: 0 $gutter-width
 
 .site__colophon
 	color: black

@@ -13,7 +13,7 @@ get_header();
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<article <?php post_class(); ?>>
+				<article <?php post_class('entry'); ?>>
 					<header class="entry__heading">
 						<h1 class="entry__headline"><?php the_title(); ?></h1>
 

@@ -30,10 +30,4 @@
 				<h1 class="heading__headline"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<span class="heading__description"><?php bloginfo( 'description' ); ?></span>
 			</hgroup>
-
-			<div class="site__navigation__skip"><a href="#content" title="<?php esc_attr_e( 'Skip to content', '_s' ); ?>"><?php _e( 'Skip to content', '_s' ); ?></a></div>
-
-			<nav class="site__navigation--primary" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- .site-navigation .main-navigation -->
 		</header><!-- #masthead .site-header -->
